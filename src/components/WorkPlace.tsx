@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import * as motion from "motion/react-client";
+import { GoArrowUpRight } from "react-icons/go";
 
 function WorkPlace() {
   const [workExperience, setWorkExperience] = React.useState([
@@ -17,7 +18,7 @@ function WorkPlace() {
         "/images/react.svg",
         "/images/fm.svg",
       ],
-      link: "https://simxchanger.net/",
+      link: "https://mapofpi7689.pinet.com",
     },
     {
       title: "Contract: Front-end Developer, @Simxchanger",
@@ -57,9 +58,9 @@ function WorkPlace() {
             duration: 0.8,
             delay: 0.2,
           }}
-          className="lg:text-6xl md:text-5xl text-4xl font-bold text-center"
+          className="lg:text-6xl md:text-5xl text-4xl font-bold text-center my_rad_gra"
         >
-          My work experience
+          work experience
         </motion.h1>
       </div>
       <div className="grid md:grid-cols-2 grid-cols-1 gap-6  md:px-20 px-4">
@@ -83,22 +84,24 @@ function WorkPlace() {
           </div>
         ))} */}
 
-        <motion.div 
-         initial={{ x: -30, opacity: 0 }}
-         whileInView={{
-           opacity: 1,
-           x: 0,
-         }}
-         viewport={{ once: true, amount: 0.5 }}
-         transition={{
-           duration: 0.8,
-          //  delay: 0.2
-         }}
-        className="w-full p-8 dark:bg-black-200 bg-[#F9FAFB] border-b-4 border-solid border-b-[#ffbd39]"
+        <motion.div
+          initial={{ x: -30, opacity: 0 }}
+          whileInView={{
+            opacity: 1,
+            x: 0,
+          }}
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{
+            duration: 0.8,
+            //  delay: 0.2
+          }}
+          className="w-full p-8 dark:bg-black-200 bg-[#F9FAFB] border-b-4 border-solid border-b-[#ffbd39]"
         >
           <div className="flex justify-between">
             <h2>{workExperience[0].title}</h2>
-            <Link href="">Live</Link>
+            <Link href={`${workExperience[0].link}`}>
+              <GoArrowUpRight />
+            </Link>
           </div>
           <h2 className="text-sm text-gray-600 mb-2">
             {workExperience[0].date}
@@ -111,23 +114,28 @@ function WorkPlace() {
             ))}
           </div>
         </motion.div>
-        <motion.div 
-         initial={{ x: 30, opacity: 0 }}
-         whileInView={{
-           opacity: 1,
-           x: 0,
-         }}
-         viewport={{ once: true, amount: 0.5 }}
-         transition={{
-           duration: 0.8,
-          //  delay: 0.2
-         }}
-        className="w-full p-8 dark:bg-black-200 bg-[#F9FAFB] border-b-4 border-solid border-b-[#ffbd39]">
+        <motion.div
+          initial={{ x: 30, opacity: 0 }}
+          whileInView={{
+            opacity: 1,
+            x: 0,
+          }}
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{
+            duration: 0.8,
+            //  delay: 0.2
+          }}
+          className="w-full p-8 dark:bg-black-200 bg-[#F9FAFB] border-b-4 border-solid border-b-[#ffbd39]"
+        >
           <div className="flex justify-between">
             <h2>{workExperience[1].title}</h2>
-            <Link href="">Live</Link>
+            <Link href={`${workExperience[1].link}`}>
+              <GoArrowUpRight />
+            </Link>
           </div>
-          <h2 className="text-sm text-gray-600 mb-2">{workExperience[1].date}</h2>
+          <h2 className="text-sm text-gray-600 mb-2">
+            {workExperience[1].date}
+          </h2>
           <hr className="py-2" />
           <p className="text-xs leading-5">{workExperience[1].desc}</p>
           <div className="flex gap-3 mt-2">
@@ -136,27 +144,32 @@ function WorkPlace() {
             ))}
           </div>
         </motion.div>
-        <motion.div 
-         initial={{ y: 30, opacity: 0 }}
-         whileInView={{
-           opacity: 1,
-           y: 0,
-         }}
-         viewport={{ once: true, amount: 0.5 }}
-         transition={{
-           duration: 0.8,
-          //  delay: 0.2
-         }}
-        className="w-full p-8 dark:bg-black-200 bg-[#F9FAFB] border-b-4 border-solid border-b-[#ffbd39]">
+        <motion.div
+          initial={{ y: 30, opacity: 0 }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+          }}
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{
+            duration: 0.8,
+            //  delay: 0.2
+          }}
+          className="w-full p-8 dark:bg-black-200 bg-[#F9FAFB] border-b-4 border-solid border-b-[#ffbd39]"
+        >
           <div className="flex justify-between">
-            <h2>{workExperience[1].title}</h2>
-            <Link href="">Live</Link>
+            <h2>{workExperience[2].title}</h2>
+            <Link href="">
+              <GoArrowUpRight />
+            </Link>
           </div>
-          <h2 className="text-sm text-gray-600 mb-2">{workExperience[1].date}</h2>
+          <h2 className="text-sm text-gray-600 mb-2">
+            {workExperience[2].date}
+          </h2>
           <hr className="py-2" />
-          <p className="text-xs leading-5">{workExperience[1].desc}</p>
+          <p className="text-xs leading-5">{workExperience[2].desc}</p>
           <div className="flex gap-3 mt-2">
-            {workExperience[1].images.map((image, index) => (
+            {workExperience[2].images.map((image, index) => (
               <Image key={index} src={image} alt="" width={25} height={25} />
             ))}
           </div>

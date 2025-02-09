@@ -28,7 +28,7 @@ function Project() {
             duration: 0.8,
             delay: 0.2
           }}
-          className="lg:text-6xl md:text-5xl text-4xl font-bold text-center"
+          className="lg:text-6xl md:text-5xl text-4xl font-bold text-center my_rad_gra"
         >
           Projects
         </motion.h1>

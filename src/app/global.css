@@ -93,3 +93,10 @@
   box-shadow: 0 0 10px 1px rgba(56,55,53,.2);
   backdrop-filter: blur(30px);
 }
+
+.my_rad_gra {
+  border-bottom: 2px solid;
+  border-image: radial-gradient(circle,#00c7bd,#00c7bd,transparent,transparent) 1;
+  padding-bottom: 20px;
+  /* padding-inline: 30px; */
+}
